@@ -1,0 +1,49 @@
+{% load userdefinedFilters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER DEFINED FILTERS</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 0;
+            padding: 30px 0;
+            background-color: black;
+            color: lightseagreen;
+            font-weight: 700;
+        }
+        h2{
+            background-color: lightblue;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>USER DEFINED FILTERS</h1>
+        <br><br>
+        <h2>SWAP</h2><br>
+        <h3>original - {{data}}</h3>
+        <h3>Swapped - {{ data|swap }}</h3>
+        <br><br>
+        <h2>REMOVE</h2><br>
+        <h3>original - {{data}}</h3>
+        <h3>removed - {{data|remove:'H'}}</h3>
+        <br><br>
+        <h2>middle_lower -</h2><br>
+        <h3>original - {{data2}}</h3>
+        <h3>middle word lower - {{data2|middle_lower}}</h3>
+        <br><br>
+        <h2>Count</h2><br>
+        <h3>original - {{data2}}</h3>
+        <h3>count of character 'e'- {{data2|count:'e'}}</h3>
+    </center>
+</body>
+</html>
